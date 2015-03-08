@@ -29,7 +29,7 @@ if(empty($_POST['name'])  		||
       'api_user' => "$user",
       'api_key' => "$pass",
       'to' => "ivanteong@hotmail.com", // set TO address to have the contact form's email content sent to
-      'subject' => "Website Contact Form:  $name", // Either give a subject for each submission, or set to $subject
+      'subject' => "IvanTeong.com Website Contact Form:  $name $email", // Either give a subject for each submission, or set to $subject
       'html' => "<html><head><title> Contact Form</title><body>
        Name: $name\n<br>
        Email: $email\n<br>
@@ -41,8 +41,6 @@ if(empty($_POST['name'])  		||
        Subject: $phone\n
        Message: $message",
       'from' => 'noreply@ivanteong.com', // set from address here, it can really be anything
-      mail($to,$subject,$html,$text,$from);
-      return true;  
    );
 
  curl_setopt($curl, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
