@@ -10,6 +10,11 @@ if(empty($_POST['name'])  		||
 	return false;
    }
 
+$name = $_POST['name'];
+$email_address = $_POST['email'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
+
 // Sendgrid API
  $url = 'https://api.sendgrid.com/';
  $user = 'app34649997@heroku.com';
@@ -49,10 +54,7 @@ if(empty($_POST['name'])  		||
 
 //End of Sendgrid API
  
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
+
 	
 // Create the email and send the message
 $to = 'ivanteong@hotmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
