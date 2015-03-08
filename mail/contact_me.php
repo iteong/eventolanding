@@ -10,23 +10,22 @@ if(empty($_POST['name'])  		||
 	return false;
    }
 
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
-
 // Sendgrid API
  $url = 'https://api.sendgrid.com/';
  $user = 'app34649997@heroku.com';
  $pass = '5brcxg45'; 
+ $name = $_POST['name'];
+ $email_address = $_POST['email'];
+ $phone = $_POST['phone'];
+ $message = $_POST['message'];
 
  $params = array(
       'api_user' => $user,
       'api_key' => $pass,
       'to' => 'ivanteong@hotmail.com',
       'subject' => 'Website Contact Form:  $name',
-      'html' => 'You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message',
-      'text' => 'You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message',
+      'html' => 'You have received a new message from your website contact form. Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message',
+      'text' => 'You have received a new message from your website contact form. Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message',
       'from' => 'noreply@ivanteong.com',
    );
 
