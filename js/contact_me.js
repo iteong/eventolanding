@@ -7,15 +7,6 @@ $(function() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
-            //Sendgrid API
-            emailData = 
-{
-    to: "ivanteong@hotmail.com",
-    from: "ivanteong@hotmail.com",
-    api_user: "app34649997@heroku.com",
-    api_key: "5brcxg45",
-    postUrl: 'https://api.sendgrid.com/api/mail.send.json'
-};
 
             // get values from FORM
             var name = $("input#name").val();

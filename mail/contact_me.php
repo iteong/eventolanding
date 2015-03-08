@@ -9,7 +9,45 @@ if(empty($_POST['name'])  		||
 	echo "No arguments Provided!";
 	return false;
    }
-	
+
+// Sendgrid API
+ $url = 'https://api.sendgrid.com/';
+ $user = 'app34649997@heroku.com';
+ $pass = '5brcxg45'; 
+
+ $params = array(
+      'api_user' => $user,
+      'api_key' => $pass,
+      'to' => 'ivanteong@hotmail.com',
+      'subject' => 'testing from curl',
+      'html' => 'testing body',
+      'text' => 'testing body',
+      'from' => 'anna@contoso.com',
+   );
+
+ $request = $url.'api/mail.send.json';
+
+ // Generate curl request
+ $session = curl_init($request);
+
+ // Tell curl to use HTTP POST
+ curl_setopt ($session, CURLOPT_POST, true);
+
+ // Tell curl that this is the body of the POST
+ curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
+
+ // Tell curl not to return headers, but do return the response
+ curl_setopt($session, CURLOPT_HEADER, false);
+ curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+
+ // obtain response
+ $response = curl_exec($session);
+ curl_close($session);
+
+ // print everything out
+ print_r($response);
+
+
 $name = $_POST['name'];
 $email_address = $_POST['email'];
 $phone = $_POST['phone'];
