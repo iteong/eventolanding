@@ -41,6 +41,8 @@ if(empty($_POST['name'])  		||
        Subject: $phone\n
        Message: $message",
       'from' => 'noreply@ivanteong.com', // set from address here, it can really be anything
+      mail($to,$subject,$html,$text,$from);
+      return true;  
    );
 
  curl_setopt($curl, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
