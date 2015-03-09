@@ -10,8 +10,6 @@ if(empty($_POST['name'])  		||
 	return false;
    }
 
-// Sendgrid API
-
 // use actual sendgrid username and password in this section
  $url = 'https://api.sendgrid.com/';
  $user = 'app34649997@heroku.com';
@@ -63,6 +61,5 @@ if(empty($_POST['name'])  		||
  // print everything out
  print_r($response);
 
-//End of Sendgrid API
 		
 ?>
