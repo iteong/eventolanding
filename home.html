@@ -42,8 +42,7 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-        
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
         <!-- start Mixpanel -->
         <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
@@ -108,49 +107,38 @@ mixpanel.init("5afb548f37a851b73bc9fb0dc7dc1466");</script><!-- end Mixpanel -->
                     <div class="col-md-3">
                         
                         <div class="menu-item blue">
-                            <a href="#feature-modal" data-toggle="modal">
+                            <a id="skills-modal" href="#feature-modal" data-toggle="modal">
                                 <i class="fa fa-magic"></i>
                                 <p><b>My Skills</b></p>
                             </a>
                         </div>
                         <!-- Mixpanel Track Clicks for link ids #modal-name -->
-                        <script type="text/javascript">
-                            $("#feature-modal").click(function(event) {
-                                var cb = generate_callback($(this));
-                                event.preventDefault();
-                                mixpanel.track("load skills modal", { "Domain": "tradesumo.com" }, cb);
-                                setTimeout(cb, 500);
-                            })
-                            
-                            function generate_callback(a) {
-                                return function() {
-                                    window.location = a.attr("href");
-                                }
-                            }
+                        <script>
+                        mixpanel.track_links("#skills-modal", "load skills modal");
                         </script>
                         <!-- End of Mixpanel Track Clicks -->
                         
                         <div class="menu-item green">
-                            <a href="#portfolio-modal" data-toggle="modal">
+                            <a id="projects-modal" href="#portfolio-modal" data-toggle="modal">
                                 <i class="fa fa-file-photo-o"></i>
                                 <p><b>My Projects</b></p>
                             </a>
                         </div>
                         <!-- Mixpanel Track Clicks for link ids #modal-name -->
                         <script>
-                        mixpanel.track_links("#portfolio-modal", "load projects modal");
+                        mixpanel.track_links("#projects-modal", "load projects modal");
                         </script>
                         <!-- End of Mixpanel Track Clicks -->
                         
                         <div class="menu-item light-red">
-                            <a href="#about-modal" data-toggle="modal">
+                            <a id="about-me-modal" href="#about-modal" data-toggle="modal">
                                 <i class="fa fa-user"></i>
                                 <p><b>About Me</b></p>
                             </a>
                         </div>
                         <!-- Mixpanel Track Clicks for link ids #modal-name -->
                         <script>
-                        mixpanel.track_links("#about-modal", "load about me modal");
+                        mixpanel.track_links("#about-me-modal", "load about me modal");
                         </script>
                         <!-- End of Mixpanel Track Clicks -->
                         
@@ -189,7 +177,7 @@ mixpanel.init("5afb548f37a851b73bc9fb0dc7dc1466");</script><!-- end Mixpanel -->
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="menu-item color responsive">
-                                    <a href="#team-modal" data-toggle="modal">
+                                    <a id="work-experience-modal" href="#team-modal" data-toggle="modal">
                                         <i class="fa fa-area-chart"></i>
                                         <p><b>My Work Experience</b></p>
                                     </a>
@@ -197,13 +185,13 @@ mixpanel.init("5afb548f37a851b73bc9fb0dc7dc1466");</script><!-- end Mixpanel -->
                             </div>
                         <!-- Mixpanel Track Clicks for link ids #modal-name -->
                         <script>
-                        mixpanel.track_links("#team-modal", "load work experience modal");
+                        mixpanel.track_links("#work-experience-modal", "load work experience modal");
                         </script>
                         <!-- End of Mixpanel Track Clicks -->
                             
                             <div class="col-md-6">
                                 <div class="menu-item light-orange responsive-2">
-                                    <a href="#news-modal" data-toggle="modal">
+                                    <a id="education-modal" href="#news-modal" data-toggle="modal">
                                         <i class="fa fa-mortar-board"></i>
                                         <p><b>My Education</b></p>
                                     </a>
@@ -211,7 +199,7 @@ mixpanel.init("5afb548f37a851b73bc9fb0dc7dc1466");</script><!-- end Mixpanel -->
                             </div>
                         <!-- Mixpanel Track Clicks for link ids #modal-name -->
                         <script>
-                        mixpanel.track_links("#news-modal", "load education modal");
+                        mixpanel.track_links("#education-modal", "load education modal");
                         </script>
                         <!-- End of Mixpanel Track Clicks -->
                             
@@ -222,38 +210,38 @@ mixpanel.init("5afb548f37a851b73bc9fb0dc7dc1466");</script><!-- end Mixpanel -->
                     <div class="col-md-3">
                         
                         <div class="menu-item light-red">
-                            <a href="#contact-modal" data-toggle="modal">
+                            <a id="contact-me-modal" href="#contact-modal" data-toggle="modal">
                                 <i class="fa fa-envelope-o"></i>
                                 <p><b>Contact Me</b></p>
                             </a>
                         </div>
                         <!-- Mixpanel Track Clicks for link ids #modal-name -->
                         <script>
-                        mixpanel.track_links("#contact-modal", "load contact modal");
+                        mixpanel.track_links("#contact-me-modal", "load contact modal");
                         </script>
                         <!-- End of Mixpanel Track Clicks -->
                         
                         <div class="menu-item color">
-                            <a href="#testimonial-modal" data-toggle="modal">
+                            <a id="blog-modal" href="#testimonial-modal" data-toggle="modal">
                                 <i class="fa fa-comment-o"></i>
                                 <p><b>My Blog</b></p>
                             </a>
                         </div>
                         <!-- Mixpanel Track Clicks for link ids #modal-name -->
                         <script>
-                        mixpanel.track_links("#testimonial-modal", "load blog modal");
+                        mixpanel.track_links("#blog-modal", "load blog modal");
                         </script>
                         <!-- End of Mixpanel Track Clicks -->
                         
                         <div class="menu-item blue">
-                            <a href="#service-modal" data-toggle="modal">
+                            <a id="travels-modal" href="#service-modal" data-toggle="modal">
                                 <i class="fa fa-users"></i>
                                 <p><b>My Travels</b></p>
                             </a>
                         </div>
                         <!-- Mixpanel Track Clicks for link ids #modal-name -->
                         <script>
-                        mixpanel.track_links("#service-modal", "load travels modal");
+                        mixpanel.track_links("#travels-modal", "load travels modal");
                         </script>
                         <!-- End of Mixpanel Track Clicks -->
                         
