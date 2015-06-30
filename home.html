@@ -59,6 +59,18 @@ mixpanel.init("5afb548f37a851b73bc9fb0dc7dc1466");</script><!-- end Mixpanel -->
     });
     </script>
 
+    <!-- Mixpanel Track Clicks for link ids #modal-name -->
+    <script>
+mixpanel.track_links("#feature-modal", "load skills modal");
+mixpanel.track_links("#portfolio-modal", "load projects modal");
+mixpanel.track_links("#about-modal", "load about me modal");
+mixpanel.track_links("#team-modal", "load work experience modal");
+mixpanel.track_links("#news-modal", "load education modal");
+mixpanel.track_links("#contact-modal", "load contact modal");
+mixpanel.track_links("#testimonial-modal", "load blog modal");
+mixpanel.track_links("#service-modal", "load travels modal");
+    </script>
+
         <!-- Start Logo Section -->
         <section id="logo-section" class="text-center">
             <div class="container">
