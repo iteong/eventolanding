@@ -265,6 +265,38 @@ and (max-width : 1199px) {
 }
 
 
+/**** Header ****/
+
+.header-social li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+@media only screen and (max-width : 360px) {
+    
+    .header-social li {
+        padding: 0 5px;
+    }
+    
+}
+
+.header-social li a {
+    background: #FF432E;
+    padding: 8px;
+    color: #fff;
+}
+
+.header-social li i {
+    font-size: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.header-social li:hover a {
+    background: #fff;
+    color: #666;
+}
+
 
 /**** Start Modal Section ****/
 
