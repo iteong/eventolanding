@@ -43,9 +43,21 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        <!-- start Mixpanel -->
+        <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("5afb548f37a851b73bc9fb0dc7dc1466");</script><!-- end Mixpanel -->
+
     </head>
     
     <body>
+
+    <!-- Mixpanel Tracking Page Views -->
+    <script>
+    mixpanel.track('load homepage', {
+    'url': location.pathname
+    });
+    </script>
 
         <!-- Start Logo Section -->
         <section id="logo-section" class="text-center">
@@ -187,6 +199,12 @@
         <!-- Start Skills/Feature Section -->
         <div class="section-modal modal fade" id="feature-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
+                <!-- Mixpanel Tracking Page Views -->
+                <script>
+                mixpanel.track('load skills modal', {
+                'url': location.pathname
+                });
+                </script>
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -286,6 +304,11 @@
         <!-- Start Projects/Portfolio Section -->
         <div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
+                <script>
+                mixpanel.track('load projects modal', {
+                'url': location.pathname
+                });
+                </script>
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -345,6 +368,11 @@
         <!-- Start About Us Section -->
         <div class="section-modal modal fade" id="about-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
+                <script>
+                mixpanel.track('load about me modal', {
+                'url': location.pathname
+                });
+                </script>
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -517,6 +545,11 @@
         <!-- Start Work Experience/Team Section -->
                 <div class="section-modal modal fade" id="team-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
+                <script>
+                mixpanel.track('load work experience modal', {
+                'url': location.pathname
+                });
+                </script>
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -641,6 +674,11 @@
         <!-- Start Travels/Testimonial Section -->
  <div class="section-modal modal fade" id="service-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
+                <script>
+                mixpanel.track('load travels modal', {
+                'url': location.pathname
+                });
+                </script>
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -980,6 +1018,11 @@
         <!-- Start Education/Latest News Section -->
         <div class="section-modal modal fade" id="news-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
+                <script>
+                mixpanel.track('load education modal', {
+                'url': location.pathname
+                });
+                </script>
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -1105,6 +1148,11 @@
         <!-- Start Contact Section -->
         <div class="section-modal modal fade contact" id="contact-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
+                <script>
+                mixpanel.track('load contact modal', {
+                'url': location.pathname
+                });
+                </script>
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -1191,9 +1239,14 @@
         <!-- End Contact Section -->
         
         
-         <!-- Start Testimonial Section -->
+         <!-- Start Blog/Testimonial Section -->
         <div class="section-modal modal fade contact" id="testimonial-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
+                <script>
+                mixpanel.track('load blog modal', {
+                'url': location.pathname
+                });
+                </script>
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -1232,7 +1285,7 @@
                 
             </div>
             <a href="#0" class="cd-top">Top</a></div>
-        <!-- End Testimonial Section -->
+        <!-- End Blog/Testimonial Section -->
 
 <a href="#0" class="cd-top">Top</a>
     </body>
