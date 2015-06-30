@@ -70,9 +70,27 @@ mixpanel.init("5afb548f37a851b73bc9fb0dc7dc1466");</script><!-- end Mixpanel -->
                         </div>
                             <div class="header-social text-center">
                                 <ul>
-                                    <li><a href="http://facebook.com/ivanteong" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="http://linkedin.com/in/ivanteong" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="http://twitter.com/IvanTeongSH" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a id="header-facebook" href="http://facebook.com/ivanteong" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <!-- Mixpanel Track Clicks for header social links -->
+                                    <script>
+                                    mixpanel.track_links("header-facebook", "clicked header facebook link");
+                                    </script>
+                                    <!-- End of Mixpanel Track Clicks -->
+
+                                    <li><a id="header-linkedin" href="http://linkedin.com/in/ivanteong" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    <!-- Mixpanel Track Clicks for header social links -->
+                                    <script>
+                                    mixpanel.track_links("header-linkedin", "clicked header linkedin link");
+                                    </script>
+                                    <!-- End of Mixpanel Track Clicks -->
+
+                                    <li><a id="header-twitter" href="http://twitter.com/IvanTeongSH" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <!-- Mixpanel Track Clicks for header social links -->
+                                    <script>
+                                    mixpanel.track_links("header-twitter", "clicked header twitter link");
+                                    </script>
+                                    <!-- End of Mixpanel Track Clicks -->
+
                                 </ul>
                             </div>
                     </div>
