@@ -95,8 +95,19 @@ mixpanel.init("5afb548f37a851b73bc9fb0dc7dc1466");</script><!-- end Mixpanel -->
                             </a>
                         </div>
                         <!-- Mixpanel Track Clicks for link ids #modal-name -->
-                        <script>
-                        mixpanel.track_links("#feature-modal", "load skills modal");
+                        <script type="text/javascript">
+                            $("#feature-modal").click(function(event) {
+                                var cb = generate_callback($(this));
+                                event.preventDefault();
+                                mixpanel.track("load skills modal", { "Domain": "tradesumo.com" }, cb);
+                                setTimeout(cb, 500);
+                            })
+                            
+                            function generate_callback(a) {
+                                return function() {
+                                    window.location = a.attr("href");
+                                }
+                            }
                         </script>
                         <!-- End of Mixpanel Track Clicks -->
                         
