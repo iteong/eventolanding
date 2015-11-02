@@ -1218,9 +1218,33 @@ mixpanel.init("5afb548f37a851b73bc9fb0dc7dc1466");</script><!-- end Mixpanel -->
                         <div class="col-md-4">
                             <div class="footer-social text-center">
                                 <ul>
-                                    <li><a href="http://facebook.com/ivanteong" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="http://linkedin.com/in/ivanteong" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="http://twitter.com/IvanTeongSH" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a id="contact-facebook" href="http://facebook.com/ivanteong" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <!-- Mixpanel Track Clicks for contact social links -->
+                                    <script>
+                                    mixpanel.track_links("#contact-facebook", "clicked contact facebook link");
+                                    </script>
+                                    <!-- End of Mixpanel Track Clicks -->
+
+                                    <li><a id="contact-linkedin" href="http://linkedin.com/in/ivanteong" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    <!-- Mixpanel Track Clicks for contact social links -->
+                                    <script>
+                                    mixpanel.track_links("#contact-linkedin", "clicked contact linkedin link");
+                                    </script>
+                                    <!-- End of Mixpanel Track Clicks -->
+
+                                    <li><a id="contact-twitter" href="http://twitter.com/IvanTeongSH" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <!-- Mixpanel Track Clicks for contact social links -->
+                                    <script>
+                                    mixpanel.track_links("#contact-twitter", "clicked contact twitter link");
+                                    </script>
+                                    <!-- End of Mixpanel Track Clicks -->
+
+                                    <li><a id="contact-github" href="http://github.com/iteong" target="_blank"><i class="fa fa-github"></i></a></li>
+                                    <!-- Mixpanel Track Clicks for contact social links -->
+                                    <script>
+                                    mixpanel.track_links("#contact-github", "clicked contact github link");
+                                    </script>
+                                    <!-- End of Mixpanel Track Clicks -->
                                 </ul>
                             </div>
                         </div>
